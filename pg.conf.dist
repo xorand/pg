@@ -4,6 +4,6 @@ DBS="db1 db2"
 # ssh host with login, authentication by key
 HOST=root@192.168.25.25
 # path on remote host
-PATH=/data/
+RPATH=/data/
 # days to store backups, all backups older will be deleted
 DAYS=30
