@@ -5,7 +5,7 @@ msg () {
 }
 
 # reading config file
-SP=$(dirname "$SCRIPT")
+SP=$(dirname "$0")
 if [ "$SP" = "." ]; then
     SP=`pwd`
 fi
@@ -24,7 +24,7 @@ if [ $? != 0 ]; then
 fi
 printf "OK\n"
 msg "copying dump [$FNAME] to tmp dir ..."
-/usr/bin/time -f%E /usr/bin/scp -q $HOST:$PATH$FNAME /tmp
+/usr/bin/time -f%E /usr/bin/scp -q $HOST:$RPATH$FNAME /tmp
 msg "restore [$DB] from dump ..."
 /usr/bin/time -f%E /usr/bin/pg_restore --user postgres -d $DB /tmp/$FNAME 
 /bin/rm -f /tmp/$FNAME
