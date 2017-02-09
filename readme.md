@@ -15,3 +15,4 @@ restore to $1 database $2 dump from remote location
 
 takes settings from pg.conf
 
+$1 database recreated during process - be careful
