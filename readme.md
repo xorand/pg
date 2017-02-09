@@ -3,7 +3,7 @@
 # bk.sh
 backup script, takes settings from pg.conf
 
-command-line paramaeter $1 override databases to backup from config file
+$1 override databases to backup from config file
 
 # 2ch.sh
 copy $1 database to $2 database
